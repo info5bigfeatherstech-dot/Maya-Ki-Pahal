@@ -47,7 +47,7 @@ export default function Navbar() {
           <img
             src="/maya-ki-pahal-logo.png"
             alt={navigation.logoAlt}
-            className="h-[88px] w-[88px] object-contain md:h-[104px] md:w-[104px]"
+            className="h-[88px] w-[120px] object-contain md:h-[104px] md:w-[142px]"
           />
         </Link>
 

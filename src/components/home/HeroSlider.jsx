@@ -12,16 +12,47 @@ export default function HeroSlider() {
   const setDonateModalOpen = useUIStore((state) => state.setDonateModalOpen);
   const pointerStart = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [imagesReady, setImagesReady] = useState(false);
+  const [hasImageError, setHasImageError] = useState(false);
   const slides = data?.slides ?? [];
 
   useEffect(() => {
-    if (slides.length < 2 || isPaused) return undefined;
-    const timer = window.setInterval(
+    if (!slides.length) return undefined;
+
+    let isCancelled = false;
+    setImagesReady(false);
+    setHasImageError(false);
+
+    Promise.all(
+      slides.map(
+        (slide) =>
+          new Promise((resolve) => {
+            const image = new Image();
+            image.onload = () => resolve(true);
+            image.onerror = () => resolve(false);
+            image.src = slide.image;
+            if (image.complete) resolve(image.naturalWidth > 0);
+          }),
+      ),
+    ).then((results) => {
+      if (isCancelled) return;
+      setHasImageError(results.some((loaded) => !loaded));
+      setImagesReady(true);
+    });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [slides]);
+
+  useEffect(() => {
+    if (slides.length < 2 || isPaused || !imagesReady) return undefined;
+    const timer = window.setTimeout(
       () => setActiveSlide((activeSlide + 1) % slides.length),
       3000,
     );
-    return () => window.clearInterval(timer);
-  }, [activeSlide, isPaused, setActiveSlide, slides.length]);
+    return () => window.clearTimeout(timer);
+  }, [activeSlide, imagesReady, isPaused, setActiveSlide, slides.length]);
 
   const moveSlide = (direction) => {
     if (slides.length) {
@@ -49,14 +80,14 @@ export default function HeroSlider() {
       }}
     >
       {slide && (
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="sync">
           <motion.div
             key={slide.id}
             className="absolute inset-0 z-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
           >
             <motion.img
               src={slide.image}
@@ -64,7 +95,7 @@ export default function HeroSlider() {
               className="h-full w-full object-cover"
               initial={{ scale: 1.06 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 6, ease: "linear" }}
+              transition={{ duration: 3, ease: "linear" }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#102b25]/85 via-[#102b25]/60 to-[#102b25]/15" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#102b25]/45 via-transparent to-[#102b25]/15" />
@@ -84,6 +115,11 @@ export default function HeroSlider() {
           {data?.error ?? "The highlights are temporarily unavailable. Please refresh the page to try again."}
         </p>
       )}
+      {hasImageError && (
+        <p role="status" className="section-wrap absolute bottom-20 z-10 text-sm text-white/90">
+          {data?.imageError ?? "One or more highlight images could not be loaded."}
+        </p>
+      )}
 
       {slide && (
         <div className="section-wrap relative z-10 pb-24 pt-32 md:pb-28">
@@ -97,7 +133,7 @@ export default function HeroSlider() {
             <h1 className="max-w-3xl font-heading text-5xl font-medium leading-[1.15] capitalize">
               {slide.title}
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/90 md:text-xl capitalize">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg capitalize">
               {slide.subtitle}
             </p>
             <p className="mt-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.2em] text-saffron">

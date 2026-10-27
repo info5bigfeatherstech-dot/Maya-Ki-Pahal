@@ -17,7 +17,7 @@ export default function WhyWeExist() {
       <div className="section-wrap max-w-5xl">
         <SectionHeading title={why.title} />
         <motion.p
-          className="mx-auto max-w-5xl text-center leading-7 text-charcoal/85 md:text-lg md:leading-8 capitalize"
+          className="mx-auto max-w-5xl text-center leading-7 text-charcoal/85 md:text-sm md:leading-8 capitalize"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -45,6 +45,7 @@ export function getHeroSlides() {
       scrollLabel: "Scroll to learn about the foundation",
       loadingLabel: "Loading foundation highlights",
       error: "The highlights are temporarily unavailable. Please refresh the page to try again.",
+      imageError: "One or more highlight images could not be loaded.",
     }), 350);
   });
 }

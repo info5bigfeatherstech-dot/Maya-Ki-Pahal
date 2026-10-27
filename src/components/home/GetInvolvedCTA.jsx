@@ -19,9 +19,6 @@ export default function GetInvolvedCTA() {
           <Button onClick={() => setDonateModalOpen(true)} variant="primary">
             {involvement.donateLabel}
           </Button>
-          <Button href={involvement.volunteerHref} variant="teal">
-            {involvement.volunteerLabel}
-          </Button>
           <Button href={involvement.contactHref} variant="outline">
             {involvement.contactLabel} <ArrowRight size={16} aria-hidden="true" />
           </Button>

@@ -57,10 +57,10 @@ export default function InfoPage() {
             <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.2em] text-saffron">
               {page.eyebrow}
             </p>
-            <h1 className="font-heading text-3xl font-medium leading-tight">
+            <h1 className="font-heading text-5xl font-medium leading-tight">
               {page.title}
             </h1>
-            <p className="mt-5 max-w-2xl leading-7 text-white/90 md:text-lg capitalize">
+            <p className="mt-5 max-w-2xl leading-7 text-white/90 md:text-base capitalize">
               {page.description}
             </p>
           </motion.div>
@@ -360,7 +360,7 @@ export default function InfoPage() {
                         />
                       </div>
                       <div className="p-5">
-                        <h3 className="font-heading text-xl font-medium text-charcoal">
+                        <h3 className="font-heading text-xl font-medium text-charcoal capitalize">
                           {item.title}
                         </h3>
                         <p className="mt-2 leading-6 text-charcoal/75 capitalize">
@@ -380,7 +380,7 @@ export default function InfoPage() {
       <section className="bg-cream py-14 md:py-16">
         <div className="section-wrap flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <div>
-            <h2 className="font-heading text-2xl font-medium text-charcoal">
+            <h2 className="font-heading text-2xl font-medium text-charcoal capitalize">
               {page.closingTitle}
             </h2>
             <p className="mt-2 max-w-2xl leading-6 text-charcoal/75 capitalize">

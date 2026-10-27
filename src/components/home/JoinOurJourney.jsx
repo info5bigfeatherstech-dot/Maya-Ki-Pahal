@@ -51,12 +51,7 @@ export default function JoinOurJourney() {
               {journey.eyebrow}
             </p>
             <div className="flex items-center gap-3">
-              <Heart
-                size={30}
-                className="shrink-0 fill-terracotta text-terracotta"
-                aria-hidden="true"
-              />
-              <h2 className="font-heading text-3xl font-medium text-charcoal">
+              <h2 className="font-heading text-4xl font-medium text-charcoal">
                 {journey.title}
               </h2>
             </div>

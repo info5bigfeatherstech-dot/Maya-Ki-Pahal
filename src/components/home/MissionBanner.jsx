@@ -25,10 +25,10 @@ export default function MissionBanner() {
         <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-saffron">
           {mission.eyebrow}
         </p>
-        <h2 className="font-heading text-3xl font-medium leading-tight">
+        <h2 className="font-heading text-4xl font-medium leading-tight">
           {mission.title}
         </h2>
-        <div className="mx-auto mt-8 max-w-3xl space-y-5 text-base leading-7 text-white/85 md:text-lg capitalize">
+        <div className="mx-auto mt-8 max-w-3xl space-y-5 text-sm leading-7 text-white/85 md:text-sm capitalize">
           {mission.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

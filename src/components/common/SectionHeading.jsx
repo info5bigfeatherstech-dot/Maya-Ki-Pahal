@@ -24,7 +24,7 @@ export default function SectionHeading({
         </p>
       )}
       <h2
-        className={`font-heading text-3xl font-medium leading-tight ${
+        className={`font-heading text-4xl font-medium leading-tight ${
           light ? "text-white" : "text-charcoal"
         }`}
       >

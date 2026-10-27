@@ -60,7 +60,7 @@ export default function JoinOurJourney() {
                 {journey.title}
               </h2>
             </div>
-            <div className="mt-6 space-y-4 leading-7 text-charcoal/80">
+            <div className="mt-6 space-y-4 leading-7 text-charcoal/80 capitalize">
               {journey.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

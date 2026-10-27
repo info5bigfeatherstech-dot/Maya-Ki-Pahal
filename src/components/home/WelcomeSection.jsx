@@ -41,7 +41,7 @@ export default function WelcomeSection() {
             {welcome.quote}
           </blockquote>
           <p className="mt-6 font-extrabold text-terracotta">{welcome.highlight}</p>
-          <div className="mt-4 space-y-4 text-base leading-7 text-charcoal/80">
+          <div className="mt-4 space-y-4 text-base leading-7 text-charcoal/80 capitalize">
             {welcome.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}

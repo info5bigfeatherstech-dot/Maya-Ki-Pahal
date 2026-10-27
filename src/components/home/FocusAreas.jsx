@@ -64,7 +64,7 @@ export default function FocusAreas() {
                         <h3 className="font-heading text-2xl font-medium text-charcoal">
                           {area.title}
                         </h3>
-                        <p className="mt-3 min-h-[3.5rem] leading-6 text-charcoal/75">
+                        <p className="mt-3 min-h-[3.5rem] leading-6 text-charcoal/75 capitalize">
                           {area.description}
                         </p>
                         <a

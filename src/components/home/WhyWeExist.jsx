@@ -17,7 +17,7 @@ export default function WhyWeExist() {
       <div className="section-wrap max-w-5xl">
         <SectionHeading title={why.title} />
         <motion.p
-          className="mx-auto max-w-5xl text-center leading-7 text-charcoal/85 md:text-lg md:leading-8"
+          className="mx-auto max-w-5xl text-center leading-7 text-charcoal/85 md:text-lg md:leading-8 capitalize"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -34,7 +34,7 @@ export default function WhyWeExist() {
         >
           {why.quote}
         </motion.blockquote>
-        <p className="mx-auto max-w-4xl text-center leading-7 text-charcoal/75">
+        <p className="mx-auto max-w-4xl text-center leading-7 text-charcoal/75 capitalize">
           {why.intro}
         </p>
       </div>
@@ -76,7 +76,7 @@ export default function WhyWeExist() {
                         className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                       />
                     </div>
-                    <figcaption className="px-4 py-3 text-center text-sm font-bold text-charcoal/80">
+                    <figcaption className="px-4 py-3 text-center text-sm font-bold text-charcoal/80 capitalize">
                       {photo.caption}
                     </figcaption>
                   </motion.figure>

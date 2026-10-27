@@ -28,7 +28,7 @@ export default function MissionBanner() {
         <h2 className="font-heading text-3xl font-medium leading-tight">
           {mission.title}
         </h2>
-        <div className="mx-auto mt-8 max-w-3xl space-y-5 text-base leading-7 text-white/85 md:text-lg">
+        <div className="mx-auto mt-8 max-w-3xl space-y-5 text-base leading-7 text-white/85 md:text-lg capitalize">
           {mission.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

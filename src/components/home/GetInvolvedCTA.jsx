@@ -12,10 +12,10 @@ export default function GetInvolvedCTA() {
   return (
     <section id="get-involved" className="bg-saffron py-14 md:py-16">
       <div className="section-wrap flex flex-col items-center justify-between gap-7 md:flex-row">
-        <h2 className="max-w-xl text-center font-heading text-3xl font-medium leading-tight text-teal md:text-left">
+        <h2 className="max-w-xl text-center font-heading text-3xl font-medium leading-tight text-teal md:text-left capitalize">
           {involvement.title}
         </h2>
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3 capitalize">
           <Button onClick={() => setDonateModalOpen(true)} variant="primary">
             {involvement.donateLabel}
           </Button>

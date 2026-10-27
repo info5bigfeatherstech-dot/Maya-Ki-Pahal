@@ -94,10 +94,10 @@ export default function HeroSlider() {
             transition={{ duration: 0.65, delay: 0.12 }}
             className="max-w-3xl"
           >
-            <h1 className="max-w-3xl font-heading text-5xl font-medium leading-[1.15]">
+            <h1 className="max-w-3xl font-heading text-5xl font-medium leading-[1.15] capitalize">
               {slide.title}
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/90 md:text-xl">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/90 md:text-xl capitalize">
               {slide.subtitle}
             </p>
             <p className="mt-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.2em] text-saffron">

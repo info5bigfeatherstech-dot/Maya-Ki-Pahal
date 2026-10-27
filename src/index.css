@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Nunito", sans-serif;
+  color: #2b2b2b;
+  background: #fff8ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header nav {
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #fff8ee;
+  background: #1f5c4d;
+}
+
+:focus-visible {
+  outline: 3px solid #ef8b22;
+  outline-offset: 4px;
+}
+
+.section-wrap {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .section-wrap {
+    width: min(100% - 5rem, 76rem);
+  }
+}
+
+.hero-dots button[aria-current="true"] span {
+  width: 2rem;
+  background-color: #e8a33d;
+}

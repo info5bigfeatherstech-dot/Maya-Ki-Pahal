@@ -96,7 +96,6 @@ const aboutContent = {
     phone: "+91-7297960397",
     emailLabel: "Email",
     email: "mayakipahal@gmail.com",
-    copyright: "© Maya Ki Pahal Foundation. All rights reserved.",
     socialLabel: "Visit us on",
   },
 };

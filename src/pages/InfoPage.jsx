@@ -60,7 +60,7 @@ export default function InfoPage() {
             <h1 className="font-heading text-3xl font-medium leading-tight">
               {page.title}
             </h1>
-            <p className="mt-5 max-w-2xl leading-7 text-white/90 md:text-lg">
+            <p className="mt-5 max-w-2xl leading-7 text-white/90 md:text-lg capitalize">
               {page.description}
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export default function InfoPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="section-wrap">
           <SectionHeading title={page.sectionTitle} />
-          <p className="mx-auto -mt-5 max-w-3xl text-center leading-7 text-charcoal/75 md:text-lg">
+          <p className="mx-auto -mt-5 max-w-3xl text-center leading-7 text-charcoal/75 md:text-lg capitalize">
             {page.sectionDescription}
           </p>
 
@@ -97,7 +97,7 @@ export default function InfoPage() {
                     <h2 className="font-heading text-xl font-medium text-charcoal">
                       {card.title}
                     </h2>
-                    <p className="mt-2 leading-6 text-charcoal/75">
+                    <p className="mt-2 leading-6 text-charcoal/75 capitalize">
                       {card.description}
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export default function InfoPage() {
           {page.details && (
             <section className="mt-16 border-t border-gray-200 pt-14 md:mt-20 md:pt-16">
               <SectionHeading title={page.details.title} />
-              <p className="mx-auto -mt-5 max-w-3xl text-center leading-7 text-charcoal/75 md:text-lg">
+              <p className="mx-auto -mt-5 max-w-3xl text-center leading-7 text-charcoal/75 md:text-lg capitalize">
                 {page.details.description}
               </p>
               <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -134,7 +134,7 @@ export default function InfoPage() {
                       <h3 className="font-heading text-xl font-medium text-charcoal">
                         {item.title}
                       </h3>
-                      <p className="mt-3 leading-6 text-charcoal/75">
+                      <p className="mt-3 leading-6 text-charcoal/75 capitalize">
                         {item.description}
                       </p>
                       <ul className="mt-4 space-y-2">
@@ -170,7 +170,7 @@ export default function InfoPage() {
                 <h2 className="font-heading text-2xl font-medium text-charcoal">
                   {page.secondaryTitle}
                 </h2>
-                <p className="mt-4 leading-7 text-charcoal/75">
+                <p className="mt-4 leading-7 text-charcoal/75 capitalize">
                   {page.secondaryDescription}
                 </p>
               </div>
@@ -203,7 +203,7 @@ export default function InfoPage() {
                     <h2 className="font-heading text-2xl font-medium leading-tight text-charcoal">
                       {story.title}
                     </h2>
-                    <p className="mt-4 leading-7 text-charcoal/75">
+                    <p className="mt-4 leading-7 text-charcoal/75 capitalize">
                       {story.description}
                     </p>
                     {story.points && (
@@ -363,7 +363,7 @@ export default function InfoPage() {
                         <h3 className="font-heading text-xl font-medium text-charcoal">
                           {item.title}
                         </h3>
-                        <p className="mt-2 leading-6 text-charcoal/75">
+                        <p className="mt-2 leading-6 text-charcoal/75 capitalize">
                           {item.description}
                         </p>
                       </div>
@@ -383,7 +383,7 @@ export default function InfoPage() {
             <h2 className="font-heading text-2xl font-medium text-charcoal">
               {page.closingTitle}
             </h2>
-            <p className="mt-2 max-w-2xl leading-6 text-charcoal/75">
+            <p className="mt-2 max-w-2xl leading-6 text-charcoal/75 capitalize">
               {page.closingDescription}
             </p>
           </div>

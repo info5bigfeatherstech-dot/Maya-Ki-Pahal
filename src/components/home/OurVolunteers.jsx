@@ -13,7 +13,7 @@ export default function OurVolunteers() {
           title={data?.title ?? "Our Volunteers"}
         />
         {data?.description && (
-          <p className="mx-auto -mt-5 mb-10 max-w-2xl text-center leading-7 text-charcoal/75">
+          <p className="mx-auto -mt-5 mb-10 max-w-2xl text-center leading-7 text-charcoal/75 capitalize">
             {data.description}
           </p>
         )}

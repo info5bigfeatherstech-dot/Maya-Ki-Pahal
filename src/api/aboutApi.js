@@ -46,6 +46,22 @@ const aboutContent = {
       "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1800&q=85",
     imageAlt: "Volunteers joining hands to support their community",
   },
+  journey: {
+    eyebrow: "Be part of something meaningful",
+    title: "Join Our Journey",
+    paragraphs: [
+      "Maya Ki Pahal welcomes volunteers, donors, and supporters who believe that everyone deserves care, dignity, and a chance to thrive.",
+      "A book, a warm blanket, a bowl of food, or simply your time and attention can become a meaningful first step. Every contribution, given with care, helps bring hope closer to someone in our community.",
+      "What began as Mrs. Maya’s personal effort has grown into a wider initiative for children, elderly people, animals, and the environment. We invite you to be part of this journey and help nurture a more compassionate future.",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=85",
+    imageAlt: "Children and community members gathered together at a local event",
+    imageBadge: "Every pahal matters",
+    action: "Contribute",
+    contactAction: "Talk to us",
+    contactHref: "/contact-us",
+  },
   involvement: {
     title: "Be the pahal. Be the change.",
     donateLabel: "Donate",

@@ -2,6 +2,7 @@ import { useAboutContent } from "../api/hooks";
 import FocusAreas from "../components/home/FocusAreas";
 import GetInvolvedCTA from "../components/home/GetInvolvedCTA";
 import HeroSlider from "../components/home/HeroSlider";
+import JoinOurJourney from "../components/home/JoinOurJourney";
 import MissionBanner from "../components/home/MissionBanner";
 import OurVolunteers from "../components/home/OurVolunteers";
 import WelcomeSection from "../components/home/WelcomeSection";
@@ -24,6 +25,7 @@ export default function Home() {
           <MissionBanner />
           <FocusAreas />
           <OurVolunteers />
+          <JoinOurJourney />
           <GetInvolvedCTA />
         </>
       )}

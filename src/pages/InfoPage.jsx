@@ -331,6 +331,47 @@ export default function InfoPage() {
                 Send message
               </Button>
             </form>
+
+            {page.supportAreas && (
+              <section className="mt-16 border-t border-gray-200 pt-14 md:mt-20 md:pt-16">
+                <SectionHeading
+                  eyebrow={page.supportAreas.eyebrow}
+                  title={page.supportAreas.title}
+                />
+                <p className="mx-auto -mt-5 max-w-3xl text-center leading-7 text-charcoal/75 md:text-lg">
+                  {page.supportAreas.description}
+                </p>
+                <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {page.supportAreas.items.map((item, index) => (
+                    <motion.article
+                      key={item.title}
+                      className="group overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                      initial={{ opacity: 0, y: 18 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.45, delay: index * 0.07 }}
+                    >
+                      <div className="h-48 overflow-hidden">
+                        <img
+                          src={item.image}
+                          alt={item.imageAlt}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-heading text-xl font-medium text-charcoal">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 leading-6 text-charcoal/75">
+                          {item.description}
+                        </p>
+                      </div>
+                    </motion.article>
+                  ))}
+                </div>
+              </section>
+            )}
             </>
           )}
         </div>

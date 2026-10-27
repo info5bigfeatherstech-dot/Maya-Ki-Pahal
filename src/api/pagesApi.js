@@ -330,6 +330,42 @@ const pages = {
       emailAction: "Send an email",
       phoneAction: "Call the foundation",
     },
+    supportAreas: {
+      eyebrow: "Small steps, meaningful change",
+      title: "There Is A Place For Everyone",
+      description:
+        "Your time, kindness, and ideas can help create a more caring community. Choose the way you would like to make a difference.",
+      items: [
+        {
+          title: "Support education",
+          description: "Help children learn, grow in confidence, and imagine a brighter future.",
+          image:
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85",
+          imageAlt: "Children learning together in a classroom",
+        },
+        {
+          title: "Care for people",
+          description: "Offer time, companionship, and practical support to people who need a helping hand.",
+          image:
+            "https://images.unsplash.com/photo-1587556930799-8dca6fad6d41?auto=format&fit=crop&w=900&q=85",
+          imageAlt: "A caregiver spending time with an elderly woman",
+        },
+        {
+          title: "Protect every life",
+          description: "Show compassion to animals and help build awareness around kindness and care.",
+          image:
+            "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85",
+          imageAlt: "Two dogs spending time together outdoors",
+        },
+        {
+          title: "Care for our surroundings",
+          description: "Simple everyday actions can help keep our shared environment greener and healthier.",
+          image:
+            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85",
+          imageAlt: "Sunlight shining through a green forest",
+        },
+      ],
+    },
     closingTitle: "Every pahal begins with a conversation",
     closingDescription:
       "Tell us how you would like to help and our team will be glad to connect.",
